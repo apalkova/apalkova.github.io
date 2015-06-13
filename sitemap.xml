@@ -13,12 +13,27 @@
   </url>
 
   <url>
-    <loc>/pages/lessons.html</loc>
+    <loc>/pages/training_school.html</loc>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>/pages/contacts.html</loc>
+    <loc>/pages/educational_games.html</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>/pages/montessori.html</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>/pages/music.html</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>/pages/izo.html</loc>
     <priority>1.0</priority>
   </url>
 
