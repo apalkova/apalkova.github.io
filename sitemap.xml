@@ -6,6 +6,11 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>/test2.html</loc>
+    <priority>0.8</priority>
+  </url>
+
 
   <url>
     <loc>/pages/about.html</loc>
