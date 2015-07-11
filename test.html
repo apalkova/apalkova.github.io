@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/theme/css/pygment/monokai.css" />
     <link rel="stylesheet" href="/theme/css/custom.css" />
 
+    <link rel="stylesheet" href="/theme/css/magnific-popup.css" />
+
 
     <script src="/theme/js/modernizr.js"></script>
 
@@ -53,7 +55,7 @@
             <ul class="off-canvas-list">
                 <li><a href="">Главная</a></li>
                 <li><label>Категории</label></li>
-                    <li class="active"><a href="/category/.html"></a></li>
+                    <li class="active"><a href="/category/raznoe.html">разное</a></li>
 
                 <li><label>Ссылки</label></li>
                     <li><a href="/pages/training_school.html">Подготовка к школе</a></li>
@@ -78,9 +80,6 @@
             </ul>
 
             <section class="top-bar-section">
-                <ul class="left">
-                        <li class="active"><a href="/category/.html"></a></li>
-                </ul>
                 <ul class="right">
                             <li><a href="/pages/about.html">Обо мне</a></li>
                             <li><a href="/pages/training_school.html">Подготовка к школе</a></li>
@@ -97,21 +96,27 @@
             <div class="row">
                 <!-- Main Content -->
                 <div class="medium-9 small-12 columns" role="content">
-    <div class="entry-content">
-        <p>Тестовый пост up2assffa
-a
-{filename}/test_gal/img2a.jpg</p>
-    </div><!-- /.entry-content -->
-<article>
-	<h2>Тестовый пост</h2>
-	<p>Тестовый пост up2assffa
-a
-{filename}/test_gal/img2a.jpg</p>
-	<hr/>
-	<h6><a href="/pages/about.html">Апалькова Анечка</a> в <a href="/category/.html"></a>  Вт. 26 Май 2015.</h6>
-</article>
+    <article>
+        <h2>Тестовый пост</h2>
+        <div class="entry-content">
+<img src="/photos/img2a.jpg" />            <p>Что-то странноеf
+The task is guaranteed to be executed at some time after the specified date and time, but not necessarily at that exact time. Possible reasons for broken deadlines may include many items waiting in the queue, or heavy network latency. To make sure your tasks are executed in a timely manner you should monitor the queue for congestion. Use Munin, or similar tools, to receive alerts, so appropriate action can be taken to ease the workload. See Munin.</p>
+<p>While countdown is an integer, eta must be a datetime object, specifying an exact date and time (including millisecond precision, and timezone information):</p>
+<p><img alt="fff" src="/photos/imga.jpg" />.</p>
+<h2>А вот галерейка:</h2>
+        </div><!-- /.entry-content -->
+            <div class="gallery">
+                    <a href="/photos/test_gal/img.jpg" title="img.jpg" exif="" caption=""><img src="/photos/test_gal/imgt.jpg"></a>
+                    <a href="/photos/test_gal/img2.jpg" title="img2.jpg" exif="" caption=""><img src="/photos/test_gal/img2t.jpg"></a>
+                    <a href="/photos/test_gal/test_gal_img.jpg" title="test_gal_img.png" exif="" caption=""><img src="/photos/test_gal/test_gal_imgt.jpg"></a>
+            </div>
+        <hr/>
 
-<hr/>
+    </article>
+
+    <h6><a href="/pages/about.html">Апалькова Анечка</a> в <a href="/category/raznoe.html">разное</a>  Вт. 26 Май 2015.</h6>
+
+    <hr/>
                 </div>
                 <!-- End Main Content -->
                 <!-- Sidebar -->
@@ -157,10 +162,31 @@ a
     </div><!--off-canvas inner-->
 </div><!--off-canvas wrap-->
 
-<script src="/theme/js/jquery.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="/theme/js/foundation.min.js"></script>
 <script>
     $(document).foundation();
+</script>
+
+<script src="/theme/js/jquery.magnific-popup.min.js"></script>
+<script>
+    $('.gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [1,2]
+        },
+        image: {
+            titleSrc: function(item) {
+                if (item.el.attr('caption') && item.el.attr('exif')) {
+                    return (item.el.attr('caption').replace(/\\n/g, '<br />') +
+                    '<small>' + item.el.attr('title') + ' - ' + item.el.attr('exif') + '</small>');
+                }
+                return item.el.attr('title') + '<small>' + item.el.attr('exif') + '</small>';
+            } }
+    });
 </script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">

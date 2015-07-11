@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/theme/css/pygment/monokai.css" />
     <link rel="stylesheet" href="/theme/css/custom.css" />
 
+    <link rel="stylesheet" href="/theme/css/magnific-popup.css" />
+
 
     <script src="/theme/js/modernizr.js"></script>
 
@@ -53,7 +55,7 @@
             <ul class="off-canvas-list">
                 <li><a href="">Главная</a></li>
                 <li><label>Категории</label></li>
-                    <li class="active"><a href="/category/.html"></a></li>
+                    <li ><a href="/category/raznoe.html">разное</a></li>
 
                 <li><label>Ссылки</label></li>
                     <li><a href="/pages/training_school.html">Подготовка к школе</a></li>
@@ -78,9 +80,6 @@
             </ul>
 
             <section class="top-bar-section">
-                <ul class="left">
-                        <li class="active"><a href="/category/.html"></a></li>
-                </ul>
                 <ul class="right">
                             <li><a href="/pages/about.html">Обо мне</a></li>
                             <li><a href="/pages/training_school.html">Подготовка к школе</a></li>
@@ -107,6 +106,9 @@
 		<p>Музыка
 a
 {filename}/test_gal/img2a.jpg</p>
+            <div class="gallery">
+                    <a href="/photos/pages/music/buben.jpg" title="buben.jpg" exif="" caption=""><img src="/photos/pages/music/bubent.jpg"></a>
+            </div>
 	</div>
 </div>
                 </div>
@@ -154,10 +156,31 @@ a
     </div><!--off-canvas inner-->
 </div><!--off-canvas wrap-->
 
-<script src="/theme/js/jquery.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="/theme/js/foundation.min.js"></script>
 <script>
     $(document).foundation();
+</script>
+
+<script src="/theme/js/jquery.magnific-popup.min.js"></script>
+<script>
+    $('.gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [1,2]
+        },
+        image: {
+            titleSrc: function(item) {
+                if (item.el.attr('caption') && item.el.attr('exif')) {
+                    return (item.el.attr('caption').replace(/\\n/g, '<br />') +
+                    '<small>' + item.el.attr('title') + ' - ' + item.el.attr('exif') + '</small>');
+                }
+                return item.el.attr('title') + '<small>' + item.el.attr('exif') + '</small>';
+            } }
+    });
 </script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">

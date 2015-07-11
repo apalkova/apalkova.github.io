@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="/theme/css/pygment/monokai.css" />
     <link rel="stylesheet" href="/theme/css/custom.css" />
 
-    <link rel="stylesheet" href="/theme/css/magnific-popup.css" />
-
 
     <script src="/theme/js/modernizr.js"></script>
 
@@ -55,7 +53,7 @@
             <ul class="off-canvas-list">
                 <li><a href="">Главная</a></li>
                 <li><label>Категории</label></li>
-                    <li ><a href="/category/raznoe.html">разное</a></li>
+                    <li class="active"><a href="/category/kategoriia.html">Категория</a></li>
 
                 <li><label>Ссылки</label></li>
                     <li><a href="/pages/training_school.html">Подготовка к школе</a></li>
@@ -80,10 +78,13 @@
             </ul>
 
             <section class="top-bar-section">
+                <ul class="left">
+                        <li class="active"><a href="/category/kategoriia.html">Категория</a></li>
+                </ul>
                 <ul class="right">
                             <li><a href="/pages/about.html">Обо мне</a></li>
                             <li><a href="/pages/training_school.html">Подготовка к школе</a></li>
-                            <li class="active"><a href="/pages/educational_games.html">Развивающие игры</a></li>
+                            <li><a href="/pages/educational_games.html">Развивающие игры</a></li>
                             <li><a href="/pages/montessori.html">Монтессори</a></li>
                             <li><a href="/pages/music.html">Музыка</a></li>
                             <li><a href="/pages/izo.html">ИЗО</a></li>
@@ -98,14 +99,24 @@
                 <div class="medium-9 small-12 columns" role="content">
                         <div class="row">
                             <div class="small-12 columns">
-                                <h2>Развивающие игры</h2>
+                                <h2>Category: Категория</h2>
                             </div>
                         </div>
-<div class="row">
-	<div class="small-12 columns">
-		<p>Развивающие игры</p>
-	</div>
-</div>
+
+            <article>
+                <h3><a href="/test.html">Тестовый пост</a></h3>
+                <h6>
+                    <a href="/pages/about.html">Апалькова Анечка</a>
+в <a href="/category/kategoriia.html">Категория</a>                     Вт. 26 Май 2015.
+                </h6>
+                <p>Моё резюме</p>
+<a href="/test.html"><img src="/photos/img2t.jpg"
+                                                                                           style="display: inline; float: right; margin: 2px 0 2ex 4ex;" /></a>
+                    <p class="continue"><a href="/test.html">Читать далее &raquo;</a></p>
+            </article>
+            <hr />
+
+
                 </div>
                 <!-- End Main Content -->
                 <!-- Sidebar -->
@@ -151,31 +162,10 @@
     </div><!--off-canvas inner-->
 </div><!--off-canvas wrap-->
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/theme/js/jquery.js"></script>
 <script src="/theme/js/foundation.min.js"></script>
 <script>
     $(document).foundation();
-</script>
-
-<script src="/theme/js/jquery.magnific-popup.min.js"></script>
-<script>
-    $('.gallery').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [1,2]
-        },
-        image: {
-            titleSrc: function(item) {
-                if (item.el.attr('caption') && item.el.attr('exif')) {
-                    return (item.el.attr('caption').replace(/\\n/g, '<br />') +
-                    '<small>' + item.el.attr('title') + ' - ' + item.el.attr('exif') + '</small>');
-                }
-                return item.el.attr('title') + '<small>' + item.el.attr('exif') + '</small>';
-            } }
-    });
 </script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
